@@ -1,0 +1,15 @@
+# Variables can be set per host
+[ios]
+iosxe1.lab.example.com   
+iosxe2.lab.example.com
+
+[ios:vars]
+# Informs ansible of the device os, connection type and authentication
+# details
+ansible_network_os=cisco.ios.ios   
+ansible_connection=ansible.netcommon.network_cli    
+ansible_become=yes
+ansible_become_method=enable
+ansible_user=student
+ansible_ssh_private_key_file=~/.ssh/lab_rsa
+
